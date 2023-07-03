@@ -1,0 +1,12 @@
+.container {
+    width: 58%;
+    margin: 20px auto;
+    padding: 10px;
+    border: 8px solid red;
+    border-radius: 5px;
+
+}
+
+.btn {
+    display:flex
+}
