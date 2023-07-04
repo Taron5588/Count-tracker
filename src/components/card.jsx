@@ -1,21 +1,24 @@
 import './Card.css'
+import { useState } from 'react'
 
-function Card({value}) {
+function Card({value, array}) {
 
-
-    const array = [1,2,3,4,5]
-    array[5] = value
-
-    function Handle() {
-        array.push(0)
+    const[arr, setArr] = useState(array)
+    arr.push(value)
+    
+    const handle = () => {
+        setArr(arr.slice(1))
     }
+
+
+    //debugger;
 
     return(
         <div>
-            {array.map((item, idx) => {
+            {arr.map((item, idx) => {
                 return (
                     <div key={idx} className="container">
-                        <p><button className='btn'>X</button></p>
+                        <p><button className='btn' onClick={handle}>X</button></p>
                         <h3>{`${item} qard`}</h3>
                     </div>
                 )

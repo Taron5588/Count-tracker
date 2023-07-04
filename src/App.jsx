@@ -6,7 +6,7 @@ export default function App() {
   
   return (
     <div className="App">
-      <Card value = {23}/>
+      <Card value = {10} array = {[1,2,3]}/>
     </div>
   )
 }
