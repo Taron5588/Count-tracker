@@ -4,14 +4,10 @@ import { useState } from 'react'
 function Card({value, array}) {
 
     const[arr, setArr] = useState(array)
-    arr.push(value)
     
     const handle = () => {
-        setArr(arr.slice(1))
+        setArr(arr.concat(arr[arr.length - 1] + 1))
     }
-
-
-    //debugger;
 
     return(
         <div>
